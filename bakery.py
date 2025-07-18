@@ -3,7 +3,7 @@ class Cookie:
         self.weight = weight
         self.volume = volume
         self.name = name
-        self.tastines = tastiness  # <- опечатка
+        self.tastines = tastiness  
 
     def __repr__(self):
         return f'{self.name} (w={self.weight}, v={self.volume}, t={self.tastines})'
@@ -25,7 +25,7 @@ def collect_cookies(bakery):
             c.get("weight"), 
             c.get("volume"), 
             c.get("name"), 
-            c.get("tastiness")  # <- совпадает с опечаткой
+            c.get("tastiness")  
         ))
     return cookies
 
@@ -36,8 +36,8 @@ def do_compare(old_bakery, new_bakery):
     old_cookies = collect_cookies(old_bakery)
     new_cookies = collect_cookies(new_bakery)
 
-    old_cookies.sort(key=lambda x: compare_cookies(x, Cookie(0,0,'',0)))  # <- странная сортировка
-    new_cookies.sort(key=lambda x: compare_cookies(x, Cookie(0,0,'',0)))  # <- тоже
+    old_cookies.sort(key=lambda x: compare_cookies(x, Cookie(0,0,'',0))) 
+    new_cookies.sort(key=lambda x: compare_cookies(x, Cookie(0,0,'',0))) 
 
     i = j = 0
     diff = []
