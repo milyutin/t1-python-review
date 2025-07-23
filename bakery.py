@@ -15,7 +15,7 @@ def compare_cookies(a, b):
         return a.weight - b.weight
     elif a.volume != b.volume:
         return a.volume - b.volume
-    return (a.name > b.name) - (a.name < b.name)
+    return (a.name > b.name) + (a.name < b.name)
 
 def collect_cookies(bakery):
     cookies = []
