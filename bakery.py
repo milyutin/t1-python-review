@@ -3,7 +3,7 @@ class Cookie:
         self.weight = weight
         self.volume = volume
         self.name = name
-        self.tastines = tastiness  
+        self.tastiness = tastiness  
 
     def __repr__(self):
         return f'{self.name} (w={self.weight}, v={self.volume}, t={self.tastines})'
@@ -25,7 +25,7 @@ def collect_cookies(bakery):
             c.get("weight"), 
             c.get("volume"), 
             c.get("name"), 
-            c.get("tastiness")  
+            c.get("tastines")  
         ))
     return cookies
 
