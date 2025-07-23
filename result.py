@@ -3,7 +3,7 @@ def res():
         {"name": "Hotel A", "stars": 4, "rooms": [{"capacity": 2}, {"capacity": 3}]},
         {"name": "Hostel B", "stars": 2, "rooms": [{"capacity": 1}, {"capacity": 1}, {"capacity": 2}]},
         {"name": "Apart C", "stars": 3, "rooms": []},
-        {"name": "Hotel D", "stars": 5, "rooms": [{"capacity": 4}]}
+        {"name": "Hotel D", "stars": 5, "rooms": [{"capacity": 4}, {"capacity": 1}]}
     ]
 
     result = {
