@@ -28,11 +28,8 @@ class TestIntegration:
         with allure.step("Verify post in UI"):
             self.page.goto(f"{BASE_URL}/posts/{post_id}")
             
-            # Bad practice: direct locator without waiting
             title = self.page.locator("h1").inner_text()
             assert title == payload["title"]
-            
-            # Flaky verification
             assert self.page.get_by_text(payload["body"]).is_visible()
 
     @allure.title("Get user data and verify UI elements")
@@ -46,12 +43,9 @@ class TestIntegration:
         
         # UI Verification
         self.page.goto("https://demoqa.com/profile")
-        
-        # Poor locator strategy
         self.page.fill("#userInput", user_data["username"])
         self.page.click("#submitButton")
         
-        # No proper waiting
         email = self.page.locator("#emailValue").inner_text(timeout=100)
         assert email == user_data["email"]
 
